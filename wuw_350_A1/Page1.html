@@ -1,0 +1,63 @@
+<!--?xml version = "1.0"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--Assignment 1-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<!-- Meta descriptions-->
+	<title>Wei-Lan Wu A1</title>
+	<meta name = "description" content = "ITEC 4220 A1 p1"/>
+	<meta name = "author" content = "Wei-Lan Wu"/>
+	<!--this allows for scaling based on the device it is viewed on-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- local css-->   
+    <link rel="stylesheet" type="text/css" href="CSS/a1part1.css"/>
+    <!--javascript functions-->
+    <script>
+    	//commands for when submit is clicked
+    	function mysubmit() { 
+	    	var x = document.getElementById("password");
+    		var y = document.getElementById ("hiddenField");
+    		//if the password is correct
+    		if(x.value=="1")
+    		{
+	    		window.alert(y.value);
+    		}
+    		//if password is wrong
+			else
+			{
+				alert("Wrong Password!");
+			}
+		}
+		//gives password when help is clicked
+		function help() {
+			var x = document.getElementById("ahelp")
+			window.alert(x.value);
+		}
+	 </script>
+</head>
+<body>
+<div class = "h1back">
+<h1> Input Log-In </h1>
+</div>
+<div class = "form">
+<p>Please input your information.</p>
+<form method ="post" action = "/p1Js.js">
+	<!-- text and password input fields-->
+	<p>User Id:
+	<input name = "User id" type = "text" size = "25"/>
+	</p>
+	<p>Password:
+	<input name = "Password" id= "password" type = "password" size = "25"/>
+	</p>
+	<input type = "hidden" id = "hiddenField" value = "Wei-Lan Wu"/>
+	<!-- buttons-->
+	<input id ="click" type = "submit" value ="Submit" onclick="mysubmit()" />
+	<input id ="click" type = "button" value ="Help" onclick="help()" />
+	<input type="hidden" id ="ahelp" value = "The Password is 1."/>
+	<br/>
+</form>
+</div>
+</body>
+</html>
+	
+
